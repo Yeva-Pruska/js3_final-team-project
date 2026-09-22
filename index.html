@@ -1,31 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Montserrat -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Anton -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Onest -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Roboto Condensed -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Oswald -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    
+    <header></header>
+    <main>
+        <section></section>
+
+        <section class="catalog">
+            <div class="catalog__container">
+                <div class="catalog__head">
+                    <h2 class="catalog__title">Каталог</h2>
+
+                    <p class="catalog__text">Обирай категорію, фільтруй 
+                        за ціною та розміром — знайди свій образ.</p>
+
+                    <div class="catalog__btn-holder">
+                        <button class="catalog__btn">Усе</button>
+                        <button class="catalog__btn">Кросівки</button>
+                        <button class="catalog__btn">Худі</button>
+                        <button class="catalog__btn">Кепки</button>
+                        <button class="catalog__btn">Футболки</button>
+                    </div>
+                </div>
+
+                <div class="catalog__sorting">
+                    <h3 class="catalog__sorting--title">Сортування</h3>
+
+                    <div class="catalog__sorting--holder">
+                        <select>
+                            <option>За замовчуванням</option>
+                            <option>Від найдешевшого</option>
+                            <option>Від найдорожчого</option>
+                        </select>
+
+                        <label class="catalog__available-btn">
+                            <span class="catalog__switch">
+                                <input type="checkbox" id="available">
+                                <span class="catalog__slider"></span>
+                            </span>
+
+                            Тільки в наявності
+                        </label>
+
+                        <div class="catalog__reset">Скинути фільтри</div>
+                    </div>
+                </div>
+
+                <p class="catalog__number">16 товарів</p>
+
+                <div class="catalog__holder">
+                    <!-- 1 -->
+                    <div class="catalog__product">
+                        <img class="catalog__product--image" src="" alt="">
+                        <p class="catalog__product--category"></p>
+                        <h2 class="catalog__product--name"></h2>
+                        <p class="catalog__product--price"></p>
+                        <button class="catalog__product--add-to-cart"></button>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="catalog__product">
+                        <img class="catalog__product--image" src="" alt="">
+                        <p class="catalog__product--category"></p>
+                        <h2 class="catalog__product--name"></h2>
+                        <p class="catalog__product--price"></p>
+                        <button class="catalog__product--add-to-cart"></button>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="catalog__product">
+                        <img class="catalog__product--image" src="" alt="">
+                        <p class="catalog__product--category"></p>
+                        <h2 class="catalog__product--name"></h2>
+                        <p class="catalog__product--price"></p>
+                        <button class="catalog__product--add-to-cart"></button>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="catalog__product">
+                        <img class="catalog__product--image" src="" alt="">
+                        <p class="catalog__product--category"></p>
+                        <h2 class="catalog__product--name"></h2>
+                        <p class="catalog__product--price"></p>
+                        <button class="catalog__product--add-to-cart"></button>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="catalog__product">
+                        <img class="catalog__product--image" src="" alt="">
+                        <p class="catalog__product--category"></p>
+                        <h2 class="catalog__product--name"></h2>
+                        <p class="catalog__product--price"></p>
+                        <button class="catalog__product--add-to-cart"></button>
+                    </div>
+
+                    <!-- 6 -->
+                    <div class="catalog__product">
+                        <img class="catalog__product--image" src="" alt="">
+                        <p class="catalog__product--category"></p>
+                        <h2 class="catalog__product--name"></h2>
+                        <p class="catalog__product--price"></p>
+                        <button class="catalog__product--add-to-cart"></button>
+                    </div>
+
+                    <!-- 7 -->
+                    <div class="catalog__product">
+                        <img class="catalog__product--image" src="" alt="">
+                        <p class="catalog__product--category"></p>
+                        <h2 class="catalog__product--name"></h2>
+                        <p class="catalog__product--price"></p>
+                        <button class="catalog__product--add-to-cart"></button>
+                    </div>
+
+                    <!-- 8 -->
+                    <div class="catalog__product">
+                        <img class="catalog__product--image" src="" alt="">
+                        <p class="catalog__product--category"></p>
+                        <h2 class="catalog__product--name"></h2>
+                        <p class="catalog__product--price"></p>
+                        <button class="catalog__product--add-to-cart"></button>
+                    </div>
+
+                    <!-- 9 -->
+                    <div class="catalog__product">
+                        <img class="catalog__product--image" src="" alt="">
+                        <p class="catalog__product--category"></p>
+                        <h2 class="catalog__product--name"></h2>
+                        <p class="catalog__product--price"></p>
+                        <button class="catalog__product--add-to-cart"></button>
+                    </div>
+
+                    <!-- 10 -->
+                    <div class="catalog__product">
+                        <img class="catalog__product--image" src="" alt="">
+                        <p class="catalog__product--category"></p>
+                        <h2 class="catalog__product--name"></h2>
+                        <p class="catalog__product--price"></p>
+                        <button class="catalog__product--add-to-cart"></button>
+                    </div>
+
+                    <!-- 11 -->
+                    <div class="catalog__product">
+                        <img class="catalog__product--image" src="" alt="">
+                        <p class="catalog__product--category"></p>
+                        <h2 class="catalog__product--name"></h2>
+                        <p class="catalog__product--price"></p>
+                        <button class="catalog__product--add-to-cart"></button>
+                    </div>
+
+                    <!-- 12 -->
+                    <div class="catalog__product">
+                        <img class="catalog__product--image" src="" alt="">
+                        <p class="catalog__product--category"></p>
+                        <h2 class="catalog__product--name"></h2>
+                        <p class="catalog__product--price"></p>
+                        <button class="catalog__product--add-to-cart"></button>
+                    </div>
+
+                    <!-- 13 -->
+                    <div class="catalog__product">
+                        <img class="catalog__product--image" src="" alt="">
+                        <p class="catalog__product--category"></p>
+                        <h2 class="catalog__product--name"></h2>
+                        <p class="catalog__product--price"></p>
+                        <button class="catalog__product--add-to-cart"></button>
+                    </div>
+
+                    <!-- 14 -->
+                    <div class="catalog__product">
+                        <img class="catalog__product--image" src="" alt="">
+                        <p class="catalog__product--category"></p>
+                        <h2 class="catalog__product--name"></h2>
+                        <p class="catalog__product--price"></p>
+                        <button class="catalog__product--add-to-cart"></button>
+                    </div>
+
+                    <!-- 15 -->
+                    <div class="catalog__product">
+                        <img class="catalog__product--image" src="" alt="">
+                        <p class="catalog__product--category"></p>
+                        <h2 class="catalog__product--name"></h2>
+                        <p class="catalog__product--price"></p>
+                        <button class="catalog__product--add-to-cart"></button>
+                    </div>
+
+                    <!-- 16 -->
+                    <div class="catalog__product">
+                        <img class="catalog__product--image" src="" alt="">
+                        <p class="catalog__product--category"></p>
+                        <h2 class="catalog__product--name"></h2>
+                        <p class="catalog__product--price"></p>
+                        <button class="catalog__product--add-to-cart"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section></section>
+        <section></section>
+    </main>
+    <footer></footer>
 </body>
+
 </html>
