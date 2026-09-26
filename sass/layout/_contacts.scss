@@ -1,0 +1,26 @@
+.contacts {
+    background-color: $background-main;
+
+    .contacts-title {
+        h2 {
+            font-size: 64px;
+            color: $second-main-text-color;
+            font-family:'Onest';
+            font-weight: 500;
+        } 
+
+        p {
+            font-size: 20px;
+            color: $main-text-color;
+            font-weight: 482;
+        }
+    }
+    
+    .contacts-inf {
+        .inf-list {
+            text-decoration: none;
+
+            
+        }
+    }
+}
