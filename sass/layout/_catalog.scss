@@ -1,0 +1,154 @@
+.catalog {
+    width: 100%;
+    padding: 100px;
+
+    &__container {
+        width: 100%;
+        height: auto;
+    }
+
+    &__head {
+        margin-bottom: 70px;
+    }
+
+    &__title {
+        color: $second-main-text-color;
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 48px;
+        line-height: 100%;
+        letter-spacing: 0%;
+    }
+
+    &__text {
+        color: $light-grey;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0%;
+    }
+
+    &__btn-holder {
+        display: flex;
+        gap: 15px;
+    }
+
+    &__btn {
+        color: $light-grey;
+        background-color: transparent;
+        border-radius: 20px;
+        padding: 8px 18px;
+        border: 1px solid #2C2C31;
+        font-family: Inter;
+        font-weight: 600;
+        font-style: Semi Bold;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        transition: background-color 0.3s ease;
+
+        &:hover{
+            color: #000000;
+            background-color: $second-main-text-color;
+        }
+    }
+
+    &__sorting {
+        width: 100%;
+        background-color: $second-section-container;
+        border: 1px solid #2C2C31;
+        border-radius: 20px;
+        padding: 30px 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        &--title{
+            color: $light-grey;
+            margin-bottom: 20px;
+            font-family: Inter;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 18px;
+            line-height: 100%;
+            letter-spacing: 0%;
+        }
+
+        &--holder {
+            display: flex;
+            gap: 25px;
+            align-items: end;
+        }
+
+        &--select {
+            color: $second-main-text-color;
+            background-color: $third-section-and-footer-background-color;
+            border: 1px solid #2C2C31;
+            padding: 10px 50px 10px 10px;
+            font-family: Inter;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 100%;
+            letter-spacing: 0%;
+
+        }
+    }
+
+    &__available-btn {
+        color: $light-grey;
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0%;
+    }
+
+    &__reset {
+        color: $main-text-color;
+        font-family: Inter;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-decoration: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 10%;
+        text-decoration-skip-ink: auto;
+    }
+
+    &__number {
+        color: $light-grey;
+        margin: 40px 0;
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0%;
+    }
+
+    // product cards
+
+    &__holder {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    &__product {
+        width: 301px;
+        height: 515px;
+        margin-bottom: 40px;
+        opacity: 1;
+        border: 1px solid #2C2C31;
+        border-radius: 20px;
+        background-color:  $second-section-container;
+    }
+}
