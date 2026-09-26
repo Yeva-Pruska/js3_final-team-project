@@ -1,5 +1,6 @@
-$primary-color: #3498db;
+@import "./utils/_variables.scss";
+@import "./layout/_hero.scss";
 
-body {
-  background-color: $primary-color;
+body{
+  background-color: $background-main;
 }
