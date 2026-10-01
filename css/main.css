@@ -291,3 +291,21 @@ header > div:last-child {
   border-radius: 20px;
   background-color: #1E1E22;
 }
+
+.contacts {
+  background-color: #131316;
+}
+.contacts .contacts-title h2 {
+  font-size: 64px;
+  color: #FFFFFF;
+  font-family: "Onest";
+  font-weight: 500;
+}
+.contacts .contacts-title p {
+  font-size: 20px;
+  color: #B3B3B3;
+  font-weight: 482;
+}
+.contacts .contacts-inf .inf-list {
+  text-decoration: none;
+}
