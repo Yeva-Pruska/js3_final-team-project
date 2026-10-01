@@ -343,6 +343,7 @@ header > div:last-child {
   display: flex;
   margin-top: 22px;
   gap: 25px;
+  margin-bottom: 130px;
 }
 .contacts .contacts-sm :hover {
   color: #FF3D1A;
@@ -350,4 +351,5 @@ header > div:last-child {
 .contacts img {
   display: flex;
   margin-top: 152px;
+  margin-bottom: 176px;
 }
