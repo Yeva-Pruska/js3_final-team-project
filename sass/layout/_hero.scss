@@ -120,34 +120,56 @@ header > div:last-child {
 
 .buttons {
     display: flex;
-    gap: 15px;
+    gap: 25px;
 }
 
-.buttons a {
-    text-decoration: none;
+.buttons button {
+    padding: 20px 30px;
+    border-radius: 5px;
+
+    font-family: Montserrat;
     font-weight: 600;
-    font-size: 15px;
-    padding: 14px 28px;
-    border-radius: 6px;
-    transition: all 0.2s ease;
-    display: inline-block;
+    font-style: SemiBold;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: -2%;
+    text-align: center;
+    vertical-align: middle;
+
 }
+
+// .buttons a {
+//     text-decoration: none;
+//     font-weight: 600;
+//     font-size: 15px;
+//     padding: 14px 28px;
+//     border-radius: 6px;
+//     transition: all 0.2s ease;
+//     display: inline-block;
+// }
 
 .view-catalog-btn {
     background-color: $first-section-button-right;
     color: $background-main;
-}
+    border: 0;
 
-.view-catalog-btn:hover {
-    background-color: $third-section-numbers-color;
+    &:hover {
+        background-color: #FF5132;
+    }
 }
 
 .about-store-btn {
     background-color: transparent;
     color: $second-main-text-color;
     border: 1px solid $first-section-button-left;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+        border-color: $header-background-color;
+        color: $header-background-color;
+    }
 }
 
-.about-store-btn:hover {
-    border-color: $second-main-text-color;
-}
+// .about-store-btn:hover {
+//     border-color: $second-main-text-color;
+// }
