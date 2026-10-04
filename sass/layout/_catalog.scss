@@ -120,6 +120,10 @@
         text-decoration-style: solid;
         text-decoration-thickness: 10%;
         text-decoration-skip-ink: auto;
+
+        &:hover {
+            color: $header-background-color;
+        }
     }
 
     &__number {
