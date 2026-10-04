@@ -216,3 +216,25 @@ export const products = [
     description: "Лаконічна футболка з монохромним логотипом на рукаві для повсякденного гардеробу."
   }
 ];
+
+const productsContainer = document.querySelector(".catalog__holder")
+
+function createProductCard(product) {
+  return `
+        <div class="catalog__product">
+            <img class="catalog__product--image" src="./img/shablon.webp" alt="">
+            <div class="catalog__info-holder">
+                <p class="catalog__product--category">${product.category}</p>
+                <h2 class="catalog__product--name">${product.name}</h2>
+                <p class="catalog__product--price">${product.price} ₴</p>
+                <button class="catalog__product--add-to-cart ${!product.inStock ? 'catalog__product--disabled-btn' : ''}" ${!product.inStock ? 'disabled' : ''}>${product.inStock ? 'У кошик' : 'Немає в наявності'}</button>
+            </div>
+        </div>
+`
+}
+
+function renderProducts(products) {
+  productsContainer.innerHTML = products.map(product => createProductCard(product)).join('')
+}
+
+renderProducts(products);

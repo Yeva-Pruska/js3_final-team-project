@@ -146,6 +146,13 @@
         gap: 10px;
     }
 
+    &__info-holder {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 30px;
+    }
+
     &__product {
         width: 301px;
         height: 515px;
@@ -154,5 +161,68 @@
         border: 1px solid #2C2C31;
         border-radius: 20px;
         background-color:  $second-section-container;
+
+        &--image {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        &--category {
+            color: $footer-second-color-text;
+            font-family: Inter;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0%;
+        }
+
+        &--name {
+            color: $second-main-text-color;
+            font-family: Inter;
+            font-weight: 600;
+            font-style: Semi Bold;
+            font-size: 20px;
+            line-height: 100%;
+            letter-spacing: 0%;
+        }
+
+        &--price {
+            color: $second-main-text-color;
+            font-family: Inter;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 20px;
+            line-height: 100%;
+            letter-spacing: 0%;
+        }
+
+        &--add-to-cart {
+            color: $second-main-text-color;
+            background: transparent;
+            border: 1px solid #2C2C31;
+            border-radius: 5px;
+            width: 100%;
+            padding: 15px;
+            font-family: Inter;
+            font-weight: 600;
+            font-style: Semi Bold;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        &--disabled-btn {
+            color: $footer-second-color-text;
+
+            &:hover {
+                transform: scale(1);
+            }
+        }
     }
 }
