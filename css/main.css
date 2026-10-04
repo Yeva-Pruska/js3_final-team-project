@@ -291,3 +291,65 @@ header > div:last-child {
   border-radius: 20px;
   background-color: #1E1E22;
 }
+
+.contacts {
+  background-color: #131316;
+  display: flex;
+  justify-content: center;
+  gap: 65px;
+}
+.contacts .contacts-title h2 {
+  font-size: 64px;
+  color: #FFFFFF;
+  font-family: "Onest";
+  font-weight: 500;
+  margin-top: 152px;
+}
+.contacts .contacts-title p {
+  font-size: 20px;
+  color: #B3B3B3;
+  font-weight: 482;
+}
+.contacts .contacts-inf {
+  display: flex;
+  flex-direction: row;
+}
+.contacts .contacts-inf .inf-list {
+  list-style: none;
+  width: 200px;
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+  position: relative;
+}
+.contacts .contacts-inf .inf-list .name-of-thing {
+  color: #B3B3B3;
+  font-size: 20px;
+}
+.contacts .contacts-inf .inf-list .inf-of-thing {
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 600;
+  width: 300px;
+}
+.contacts .contacts-sm {
+  color: #B3B3B3;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  margin-top: 22px;
+  gap: 25px;
+  margin-bottom: 130px;
+}
+.contacts .contacts-sm :hover {
+  color: #FF3D1A;
+}
+.contacts img {
+  display: flex;
+  margin-top: 152px;
+  margin-bottom: 176px;
+}
