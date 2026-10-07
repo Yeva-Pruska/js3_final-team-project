@@ -43,31 +43,33 @@
 </head>
 <body class="body">
 
-    <header>
-        <div class="scrolling-text">
-            <span>ОБМІН ПРОТЯГОМ 14 ДНІВ</span>
-            <span class="dot">•</span>
-            <span>НОВА КОЛЕКЦІЯ ВЖЕ В КАТАЛОЗІ</span>
-            <span class="dot">•</span>
-            <span>ДОСТАВКА ПО ВСІЙ УКРАЇНІ</span>
-            <span class="dot">•</span>
-        </div>
+   <!-- Рухомий рядок винесено нагору -->
+<div class="scrolling-text">
+    <span>ОБМІН ПРОТЯГОМ 14 ДНІВ</span>
+    <span class="dot">•</span>
+    <span>НОВА КОЛЕКЦІЯ ВЖЕ В КАТАЛОЗІ</span>
+    <span class="dot">•</span>
+    <span>ДОСТАВКА ПО ВСІЙ УКРАЇНІ</span>
+    <span class="dot">•</span>
+</div>
 
+<header>
+    <nav class="nav">
         <img src="img/logo.webp" alt="logo" class="logo">
 
-        <nav class="nav">
-            <a href="#">Головна</a>
-            <a href="#">Каталог</a>
-            <a href="#">Про нас</a>
-            <a href="#">Контакти</a>
-        </nav>
+        <a href="#">Головна</a>
+        <a href="#">Каталог</a>
+        <a href="#">Про нас</a>
+        <a href="#">Контакти</a>
+    </nav>
 
-        <div>
-            <input type="text" placeholder="Пошук товарів..." class="search">
-            <img src="cart" alt="" class="cart-icon">
-        </div>
-    </header>
-    
+    <div class="header-actions">
+        <input type="text" placeholder="Пошук товарів..." class="search">
+        <img src="cart" alt="" class="cart-icon">
+    </div>
+</header>
+
+    <!-- First section -->
     <section class="hero">
         <span class="subtitle">street style shop</span>
         <h1>ВБРАННЯ<br>ДЛЯ ВУЛИЦЬ<br>ТВОГО МІСТА</h1>
@@ -78,7 +80,7 @@
         </div>
     </section>
 
-
+    <!-- Catalog -->
     <section class="catalog">
             <div class="catalog__container">
                 <div class="catalog__head">
@@ -269,12 +271,43 @@
             </div>
         </section>
 
-        <section></section>
+        <!-- About the Store -->
+        <section class="about-store">
+            <div class="img-container">
+                <img src="img/shopping-bag.webp" alt="Обирай свій стиль">
+                <div class="badge">обирай свій стиль</div>
+            </div>
+            
+            <div class="content">
+                <h2>Про магазин</h2>
+                <p>KROK STREET — це простір для тих, хто формує власний стиль на стику <br> спорту, музики та вуличного мистецтва. 
+                    Ми відбираємо кросівки, худі <br> та аксесуари, які легко комбінувати між собою і які витримують ритм <br> справжнього міста. 
+                    <br><br> Асортимент оновлюється щотижня, а розмірна сітка підходить під різні <br> типи фігури — від XS до XL і від 40-го до 44-го.</p>
+            <div>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number">4</span>
+                <span class="stat-label">категорії товарів</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">20+</span>
+                <span class="stat-label">позицій в каталозі</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">14</span>
+                <span class="stat-label">днів на повернення</span>
+            </div>
+        </div>
+    </div>
+        </section>
+
+        <!-- Contact Section -->
         <section class="contacts">
             <div class="contacts-inf-part">
                 <div class="contacts-title">
                     <h2>Контакти</h2>
-                    <p>Є питання щодо розміру чи замовлення? Напиши <br> нам — відповідаємо швидко.</p>
+                    <p>Є питання щодо розміру чи замовлення? <br> Напиши нам — відповідаємо швидко.</p>
                 </div>
 
                 <div class="contacts-inf">
@@ -302,7 +335,77 @@
             </div>
         </section>
     </main>
-    <footer></footer>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="/img/logo.webp" alt="logo">
+                <p>Вулична культура в кожній деталі.</p>
+            </div>
+            
+        <div class="footer-column">
+            <h3 class="footer-title">Навігація</h3>
+            <ul class="footer-list">
+                 <li><a href="#">Головна</a></li>
+                 <li><a href="#">Каталог</a></li>
+                 <li><a href="#">Про нас</a></li>
+                 <li><a href="#">Контакти</a></li>
+                </ul>
+        </div>
+        
+        <div class="footer-column">
+            <h3 class="footer-title">Категорії</h3>
+            <ul class="footer-list">
+                <li><a href="#">Кросівки</a></li>
+                <li><a href="#">Худі</a></li>
+                <li><a href="#">Кепки</a></li>
+                <li><a href="#">Футболки</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-column">
+            <h3 class="footer-title">Контакти</h3>
+            <ul class="footer-list">
+                <li><a href="mailto:hello@krokstreet.ua">hello@krokstreet.ua</a></li>
+                <li><a href="tel:+38067123456">+380 (67) 123-45-6</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom"><p>© 2026 KROK STREET. Навчальний проєкт.</p></div>
+</footer>
+
+<!-- Modal windows -------------------- -->
+<div class="cart-overlay">
+  <aside class="cart-modal">
+    <!-- Хедер кошика -->
+    <div class="cart-header">
+      <h2 class="cart-title">Кошик <span>[0]</span></h2>
+      <button type="button" class="cart-close-btn" aria-label="Закрити кошик">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Основний контент порожнього кошика -->
+    <div class="cart-body empty-cart">
+      <div class="cart-empty-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 3H5L6.68 14.39C6.77144 15.0031 7.0792 15.5583 7.5479 15.9554C8.0166 16.3524 8.61461 16.5658 9.23 16.56H18.4C19.0154 16.5658 19.6134 16.3524 20.0821 15.9554C20.5508 15.5583 20.8586 15.0031 20.92 14.39L22 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="9" cy="20" r="1" stroke="currentColor" stroke-width="2"/>
+          <circle cx="18" cy="20" r="1" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </div>
+      <p class="cart-empty-text">Кошик поки порожній</p>
+      <a href="#catalog" class="cart-catalog-btn">Дивитись каталог</a>
+    </div>
+  </aside>
+</div>
+
+
+
     <script type="module" src="./js/main.js"></script>
 </body>
 

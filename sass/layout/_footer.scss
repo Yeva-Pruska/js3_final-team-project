@@ -1,0 +1,85 @@
+footer {
+  background-color: $third-section-and-footer-background-color;
+  color: $main-text-color;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding-top: 60px;
+  width: 100%;
+}
+
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px 60px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+
+.footer-brand {
+  max-width: 240px;
+}
+
+.footer-brand img {
+  height: 22px;
+  width: auto;
+  display: block;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.footer-brand p {
+  color: $main-text-color;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.footer-title {
+  color: $light-grey;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 18px 0;
+}
+
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-list a {
+  color: $third-section-second-color-text;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-list a:hover {
+  color: $second-main-text-color;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: $footer-second-color-text;
+  font-size: 13px;
+  margin: 0;
+}
