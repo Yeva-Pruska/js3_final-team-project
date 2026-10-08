@@ -64,7 +64,7 @@
 
     <div class="header-actions">
         <input type="text" placeholder="Пошук товарів..." class="search">
-        <img src="img/boxicons_cart.webp" alt="" class="cart-icon">
+        <img src="img/cart-icon.webp" alt="" class="cart-icon" id="open-cart">
     </div>
 </header>
 
@@ -376,19 +376,19 @@
 </footer>
 
 <!-- Modal windows -------------------- -->
-<div class="cart-overlay">
-  <aside class="cart-modal">
+ <div id="cart-overlay" class="cart-overlay">
+  <div class="cart-modal">
     <!-- Хедер кошика -->
     <div class="cart-header">
       <h2 class="cart-title">Кошик <span>[0]</span></h2>
-      <button type="button" class="cart-close-btn" aria-label="Закрити кошик">
+      <button id="close-cart-btn" type="button" class="cart-close-btn" aria-label="Закрити кошик">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
       </button>
     </div>
 
-    <!-- Основний контент порожнього кошика -->
+    <!-- Основний контент -->
     <div class="cart-body empty-cart">
       <div class="cart-empty-icon">
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -400,9 +400,8 @@
       <p class="cart-empty-text">Кошик поки порожній</p>
       <a href="#catalog" class="cart-catalog-btn">Дивитись каталог</a>
     </div>
-  </aside>
+  </div>
 </div>
-
 
 
     <script type="module" src="./js/main.js"></script>
