@@ -1,16 +1,29 @@
-.scrolling-text {
-    background-color: $header-background-color;
-    color: $background-main;
-    font-weight: 800;
-    font-size: 14px;
+.scrolling-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: $header-background-color;;
     padding: 8px 0;
+}
+
+.scrolling-text {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 15px;
     white-space: nowrap;
-    overflow: hidden;
-    width: 100%; // Гарантує розтягнення на всю ширину
+    color: $background-main;
+    font-weight: 800;
+    font-size: 14px;
+    width: max-content;
+    animation: scrolling-text 15s linear infinite;
+}
+
+@keyframes scrolling-text {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(200%);
+    }
 }
 
 header {
@@ -32,20 +45,6 @@ header {
 
 .header-actions{
     padding-right: 80px;
-}
-
-.scrolling-text {
-    background-color: $header-background-color;
-    color: $background-main;
-    font-weight: 800;
-    font-size: 14px;
-    padding: 8px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 .scrolling-text .dot {
