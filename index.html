@@ -91,11 +91,11 @@
                         за ціною та розміром — знайди <br> свій образ.</p>
 
                     <div class="catalog__btn-holder">
-                        <button class="catalog__btn">Усе</button>
-                        <button class="catalog__btn">Кросівки</button>
-                        <button class="catalog__btn">Худі</button>
-                        <button class="catalog__btn">Кепки</button>
-                        <button class="catalog__btn">Футболки</button>
+                        <button class="catalog__btn" data-category="Усе">Усе</button>
+                        <button class="catalog__btn" data-category="Кросівки">Кросівки</button>
+                        <button class="catalog__btn" data-category="Худі">Худі</button>
+                        <button class="catalog__btn" data-category="Кепки">Кепки</button>
+                        <button class="catalog__btn" data-category="Футболки">Футболки</button>
                     </div>
                 </div>
 
@@ -104,14 +104,14 @@
 
                     <div class="catalog__sorting--holder">
                         <select class="catalog__sorting--select">
-                            <option class="catalog__sorting--option">За замовчуванням</option>
-                            <option class="catalog__sorting--option">Від найдешевшого</option>
-                            <option class="catalog__sorting--option">Від найдорожчого</option>
+                            <option class="catalog__sorting--option" value="default">За замовчуванням</option>
+                            <option class="catalog__sorting--option" value="asc">Від найдешевшого</option>
+                            <option class="catalog__sorting--option" value="desc">Від найдорожчого</option>
                         </select>
 
                         <label class="catalog__available-btn">
                             <span class="catalog__switch">
-                                <input type="checkbox" id="available">
+                                <input class="catalog__available-btn-checkbox" type="checkbox" id="available">
                                 <span class="catalog__slider"></span>
                             </span>
 
@@ -122,7 +122,7 @@
                     </div>
                 </div>
 
-                <p class="catalog__number">16 товарів</p>
+                <p class="catalog__number"><span id="number">16</span> товарів</p>
 
                 <div class="catalog__holder">
                     <!-- 1 -->

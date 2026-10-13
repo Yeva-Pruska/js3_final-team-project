@@ -233,8 +233,65 @@ function createProductCard(product) {
 `
 }
 
+const numberOfProducts = document.querySelector("#number");
+
 function renderProducts(products) {
   productsContainer.innerHTML = products.map(product => createProductCard(product)).join('')
+  numberOfProducts.textContent = products.length
 }
 
-renderProducts(products);
+// renderProducts(products);
+
+const resetButton = document.querySelector(".catalog__reset");
+const filterBtns = document.querySelectorAll(".catalog__btn")
+const priceSelect = document.querySelector(".catalog__sorting--select")
+const availableBtn = document.querySelector(".catalog__available-btn-checkbox")
+var usersCategory = "Усе";
+
+function updateVisibleCatalog() {
+  var visibleProducts = [...products]
+
+  //за категорією:
+  if(usersCategory !== "Усе") {
+    visibleProducts = visibleProducts.filter(product => product.category === usersCategory)
+  }
+
+  //за ціною:
+  const sortValue = priceSelect.value;
+
+  if(sortValue === "asc") {
+    visibleProducts.sort((a, b) => a.price - b.price)
+  } else if(sortValue === "desc") {
+    visibleProducts.sort((a, b) => b.price - a.price)
+  }
+
+  //за наявністю:
+  if(availableBtn.checked) {
+    visibleProducts = visibleProducts.filter(product => product.inStock === true)
+  }
+
+  renderProducts(visibleProducts)
+}
+
+resetButton.addEventListener("click", function() {
+  usersCategory = "Усе";
+  availableBtn.checked = false;
+  priceSelect.value = "default";
+
+  updateVisibleCatalog()
+})
+
+filterBtns.forEach(button => {
+  button.addEventListener("click", function() {
+    usersCategory = button.dataset.category;
+    updateVisibleCatalog()
+  })
+})
+
+priceSelect.addEventListener("change", updateVisibleCatalog)
+
+availableBtn.addEventListener("change", updateVisibleCatalog)
+
+updateVisibleCatalog()
+
+
