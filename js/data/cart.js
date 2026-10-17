@@ -221,7 +221,7 @@ const productsContainer = document.querySelector(".catalog__holder")
 
 function createProductCard(product) {
   return `
-        <div class="catalog__product">
+        <div class="catalog__product" data-product-id="${product.id}">
             <img class="catalog__product--image" src="./img/shablon.webp" alt="">
             <div class="catalog__info-holder">
                 <p class="catalog__product--category">${product.category}</p>
@@ -295,3 +295,77 @@ availableBtn.addEventListener("change", updateVisibleCatalog)
 updateVisibleCatalog()
 
 
+// product modal
+const productModal = document.getElementById("product-modal");
+const closeModalBtn = document.getElementById("modal-close");
+const modalCategory = document.getElementById("modal-category");
+const modalName = document.getElementById("modal-name");
+const modalPrice = document.getElementById("modal-price");
+const modalText = document.getElementById("modal-description");
+const modalInStock = document.getElementById("modal-available");
+const modalCartBtn = document.getElementById("modal-cart");
+
+function openProductModal(product) {
+  modalCategory.textContent = `URBN · ${product.category}`;
+  modalName.textContent = product.name;
+  modalPrice.textContent = `${product.price} ₴`;
+  modalText.textContent = product.description || "";
+  modalInStock.textContent = product.inStock ? "Є в наявності" : "Немає в наявності";
+  modalCartBtn.disabled = !product.inStock;
+
+  productModal.classList.add("is-open");
+  document.body.classList.add("modal-open");
+}
+
+function closeProductModal() {
+  productModal.classList.remove("is-open");
+  document.body.classList.remove("modal-open");
+}
+
+
+productsContainer.addEventListener("click", function(event) {
+  const cartButton = event.target.closest(".catalog__product--add-to-cart");
+
+  if(!cartButton) return;
+
+  if(cartButton.disabled) return;
+
+  const productCard = cartButton.closest(".catalog__product");
+
+  if(!productCard) return;
+
+  const product = products.find(item => String(item.id) === productCard.dataset.productId);
+
+  if(product) {
+    openProductModal(product);
+  }
+});
+
+
+closeModalBtn.addEventListener("click", closeProductModal);
+
+productModal.addEventListener("click", function(event) {
+  if (event.target === productModal) {
+    closeProductModal();
+  }
+});
+
+
+
+const amountMinus = document.querySelector("#amount-minus");
+const amountPlus = document.querySelector("#amount-plus");
+const amountValue = document.querySelector("#amount-value");
+
+let amount = 1;
+
+amountMinus.addEventListener("click", function() {
+  if (amount > 1) {
+    amount--;
+    amountValue.textContent = amount;
+  }
+});
+
+amountPlus.addEventListener("click", function() {
+  amount++;
+  amountValue.textContent = amount;
+});

@@ -226,3 +226,203 @@
         }
     }
 }
+
+
+
+// product modal
+.product-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #000000b3;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+
+    &__content {
+        position: relative;
+        width: 56%;
+        height: 515px;
+        border: 2px solid #2c2c31;
+        border-radius: 20px;
+        background-color: #1e1e22;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        padding: 20px 30px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__close {
+        position: absolute;
+        top: 2%;
+        left: 96%;
+        background: transparent;
+        border: 1px solid #2C2C31;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        color: white;
+        font-size: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__img {
+        height: 100%;
+        width: auto;
+    }
+
+    &__category {
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: $light-grey;
+    }
+
+    &__name {
+        font-family: Inter;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 32px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: white;
+    }
+
+    &__price {
+        font-family: Inter;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 28px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: white;
+    }
+
+    &__text {
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: $main-text-color;
+    }
+
+    &__title {
+        font-family: Inter;
+        font-weight: 600;
+        font-style: Semi Bold;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: $footer-second-color-text;
+    }
+
+    &__sizes {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 5px;
+    }
+
+    &__size {
+        border: 1px solid #2C2C31;
+        border-radius: 3px;
+        padding: 8px 15px;
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: white;
+    }
+
+    &__available {
+        font-family: Inter;
+        font-weight: 600;
+        font-style: Semi Bold;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #FFEC3D;
+        margin-top: 8px;
+    }
+
+    &__addtocart-btn {
+        font-family: Inter;
+        font-weight: 600;
+        font-style: Semi Bold;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: $second-section-container;
+        background-color: $first-section-button-right;
+        border: none;
+        border-radius: 5px;
+        padding: 18px;
+    }
+}
+
+.product-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+
+.product-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95px;
+    height: 37px;
+    padding: 0 10px;
+    border: 1px solid #303035;
+    border-radius: 3px;
+}
+
+.product-amount__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 11px;
+    height: 19px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+        color: #aaa;
+    }
+}
+
+.product-amount__value {
+    color: #fff;
+    font-family: Inter;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
