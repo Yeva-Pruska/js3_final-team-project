@@ -14,12 +14,12 @@
     font-weight: 800;
     font-size: 14px;
     width: max-content;
-    animation: scrolling-text 15s linear infinite;
+    animation: scrolling-text 20s linear infinite;
 }
 
 @keyframes scrolling-text {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
     100% {
         transform: translateX(200%);

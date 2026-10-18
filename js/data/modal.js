@@ -1,3 +1,4 @@
+export function cartModal(){
 const openCartBtn = document.getElementById('open-cart');
   const closeCartBtn = document.getElementById('close-cart-btn');
   const cartOverlay = document.getElementById('cart-overlay');
@@ -19,7 +20,5 @@ const openCartBtn = document.getElementById('open-cart');
       cartOverlay.classList.remove('active');
       document.body.style.overflow = '';
     }
-  });
-  
-
-export default modal
+  })
+  }
