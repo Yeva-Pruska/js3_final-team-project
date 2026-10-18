@@ -97,11 +97,11 @@
                         за ціною та розміром — знайди <br> свій образ.</p>
 
                     <div class="catalog__btn-holder">
-                        <button class="catalog__btn">Усе</button>
-                        <button class="catalog__btn">Кросівки</button>
-                        <button class="catalog__btn">Худі</button>
-                        <button class="catalog__btn">Кепки</button>
-                        <button class="catalog__btn">Футболки</button>
+                        <button class="catalog__btn" data-category="Усе">Усе</button>
+                        <button class="catalog__btn" data-category="Кросівки">Кросівки</button>
+                        <button class="catalog__btn" data-category="Худі">Худі</button>
+                        <button class="catalog__btn" data-category="Кепки">Кепки</button>
+                        <button class="catalog__btn" data-category="Футболки">Футболки</button>
                     </div>
                 </div>
 
@@ -110,14 +110,14 @@
 
                     <div class="catalog__sorting--holder">
                         <select class="catalog__sorting--select">
-                            <option class="catalog__sorting--option">За замовчуванням</option>
-                            <option class="catalog__sorting--option">Від найдешевшого</option>
-                            <option class="catalog__sorting--option">Від найдорожчого</option>
+                            <option class="catalog__sorting--option" value="default">За замовчуванням</option>
+                            <option class="catalog__sorting--option" value="asc">Від найдешевшого</option>
+                            <option class="catalog__sorting--option" value="desc">Від найдорожчого</option>
                         </select>
 
                         <label class="catalog__available-btn">
                             <span class="catalog__switch">
-                                <input type="checkbox" id="available">
+                                <input class="catalog__available-btn-checkbox" type="checkbox" id="available">
                                 <span class="catalog__slider"></span>
                             </span>
 
@@ -128,153 +128,9 @@
                     </div>
                 </div>
 
-                <p class="catalog__number">16 товарів</p>
+                <p class="catalog__number"><span id="number">16</span> товарів</p>
 
-                <div class="catalog__holder">
-                    <!-- 1 -->
-                    <div class="catalog__product">
-                        <img class="catalog__product--image" src="" alt="">
-                        <p class="catalog__product--category"></p>
-                        <h2 class="catalog__product--name"></h2>
-                        <p class="catalog__product--price"></p>
-                        <button class="catalog__product--add-to-cart"></button>
-                    </div>
-
-                    <!-- 2 -->
-                    <div class="catalog__product">
-                        <img class="catalog__product--image" src="" alt="">
-                        <p class="catalog__product--category"></p>
-                        <h2 class="catalog__product--name"></h2>
-                        <p class="catalog__product--price"></p>
-                        <button class="catalog__product--add-to-cart"></button>
-                    </div>
-
-                    <!-- 3 -->
-                    <div class="catalog__product">
-                        <img class="catalog__product--image" src="" alt="">
-                        <p class="catalog__product--category"></p>
-                        <h2 class="catalog__product--name"></h2>
-                        <p class="catalog__product--price"></p>
-                        <button class="catalog__product--add-to-cart"></button>
-                    </div>
-
-                    <!-- 4 -->
-                    <div class="catalog__product">
-                        <img class="catalog__product--image" src="" alt="">
-                        <p class="catalog__product--category"></p>
-                        <h2 class="catalog__product--name"></h2>
-                        <p class="catalog__product--price"></p>
-                        <button class="catalog__product--add-to-cart"></button>
-                    </div>
-
-                    <!-- 5 -->
-                    <div class="catalog__product">
-                        <img class="catalog__product--image" src="" alt="">
-                        <p class="catalog__product--category"></p>
-                        <h2 class="catalog__product--name"></h2>
-                        <p class="catalog__product--price"></p>
-                        <button class="catalog__product--add-to-cart"></button>
-                    </div>
-
-                    <!-- 6 -->
-                    <div class="catalog__product">
-                        <img class="catalog__product--image" src="" alt="">
-                        <p class="catalog__product--category"></p>
-                        <h2 class="catalog__product--name"></h2>
-                        <p class="catalog__product--price"></p>
-                        <button class="catalog__product--add-to-cart"></button>
-                    </div>
-
-                    <!-- 7 -->
-                    <div class="catalog__product">
-                        <img class="catalog__product--image" src="" alt="">
-                        <p class="catalog__product--category"></p>
-                        <h2 class="catalog__product--name"></h2>
-                        <p class="catalog__product--price"></p>
-                        <button class="catalog__product--add-to-cart"></button>
-                    </div>
-
-                    <!-- 8 -->
-                    <div class="catalog__product">
-                        <img class="catalog__product--image" src="" alt="">
-                        <p class="catalog__product--category"></p>
-                        <h2 class="catalog__product--name"></h2>
-                        <p class="catalog__product--price"></p>
-                        <button class="catalog__product--add-to-cart"></button>
-                    </div>
-
-                    <!-- 9 -->
-                    <div class="catalog__product">
-                        <img class="catalog__product--image" src="" alt="">
-                        <p class="catalog__product--category"></p>
-                        <h2 class="catalog__product--name"></h2>
-                        <p class="catalog__product--price"></p>
-                        <button class="catalog__product--add-to-cart"></button>
-                    </div>
-
-                    <!-- 10 -->
-                    <div class="catalog__product">
-                        <img class="catalog__product--image" src="" alt="">
-                        <p class="catalog__product--category"></p>
-                        <h2 class="catalog__product--name"></h2>
-                        <p class="catalog__product--price"></p>
-                        <button class="catalog__product--add-to-cart"></button>
-                    </div>
-
-                    <!-- 11 -->
-                    <div class="catalog__product">
-                        <img class="catalog__product--image" src="" alt="">
-                        <p class="catalog__product--category"></p>
-                        <h2 class="catalog__product--name"></h2>
-                        <p class="catalog__product--price"></p>
-                        <button class="catalog__product--add-to-cart"></button>
-                    </div>
-
-                    <!-- 12 -->
-                    <div class="catalog__product">
-                        <img class="catalog__product--image" src="" alt="">
-                        <p class="catalog__product--category"></p>
-                        <h2 class="catalog__product--name"></h2>
-                        <p class="catalog__product--price"></p>
-                        <button class="catalog__product--add-to-cart"></button>
-                    </div>
-
-                    <!-- 13 -->
-                    <div class="catalog__product">
-                        <img class="catalog__product--image" src="" alt="">
-                        <p class="catalog__product--category"></p>
-                        <h2 class="catalog__product--name"></h2>
-                        <p class="catalog__product--price"></p>
-                        <button class="catalog__product--add-to-cart"></button>
-                    </div>
-
-                    <!-- 14 -->
-                    <div class="catalog__product">
-                        <img class="catalog__product--image" src="" alt="">
-                        <p class="catalog__product--category"></p>
-                        <h2 class="catalog__product--name"></h2>
-                        <p class="catalog__product--price"></p>
-                        <button class="catalog__product--add-to-cart"></button>
-                    </div>
-
-                    <!-- 15 -->
-                    <div class="catalog__product">
-                        <img class="catalog__product--image" src="" alt="">
-                        <p class="catalog__product--category"></p>
-                        <h2 class="catalog__product--name"></h2>
-                        <p class="catalog__product--price"></p>
-                        <button class="catalog__product--add-to-cart"></button>
-                    </div>
-
-                    <!-- 16 -->
-                    <div class="catalog__product">
-                        <img class="catalog__product--image" src="" alt="">
-                        <p class="catalog__product--category"></p>
-                        <h2 class="catalog__product--name"></h2>
-                        <p class="catalog__product--price"></p>
-                        <button class="catalog__product--add-to-cart"></button>
-                    </div>
-                </div>
+                <div class="catalog__holder"></div>
             </div>
         </section>
 
@@ -409,6 +265,39 @@
       <a href="#catalog" class="cart-catalog-btn">Дивитись каталог</a>
     </div>
   </div>
+</div>
+
+<!-- product modal -->
+<div class="product-modal" id="product-modal">
+    <div class="product-modal__content">
+        <button class="product-modal__close" id="modal-close">&times;</button>
+        <img class="product-modal__img" src="./img/shablon2.webp" alt="product">
+        <div class="product-modal__info">
+            <h3 class="product-modal__category" id="modal-category"></h3>
+            <h2 class="product-modal__name" id="modal-name"></h2>
+            <h2 class="product-modal__price" id="modal-price"></h2>
+            <p class="product-modal__text" id="modal-description"></p>
+
+            <label class="product-modal__title">Розмір</label>
+            <div class="product-modal__sizes">
+                <div class="product-modal__size">S</div>
+                <div class="product-modal__size">M</div>
+                <div class="product-modal__size">L</div>
+                <div class="product-modal__size">XL</div>
+            </div>
+
+            <label class="product-modal__title">Кількість</label>
+            <div class="product-amount">
+                <button class="product-amount__btn" id="amount-minus" type="button">-</button>
+                <span class="product-amount__value" id="amount-value">1</span>
+                <button class="product-amount__btn" id="amount-plus" type="button">+</button>
+            </div>
+
+            <p class="product-modal__available" id="modal-available"></p>
+
+            <button class="product-modal__addtocart-btn" id="modal-cart">Додати в кошик</button>
+        </div>
+    </div>
 </div>
 
 
