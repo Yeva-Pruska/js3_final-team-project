@@ -371,12 +371,12 @@ productModal.addEventListener("click", function(event) {
 });
 
 
-
+// - 1 + in modal
 const amountMinus = document.querySelector("#amount-minus");
 const amountPlus = document.querySelector("#amount-plus");
 const amountValue = document.querySelector("#amount-value");
 
-let amount = 1;
+var amount = 1;
 
 amountMinus.addEventListener("click", function() {
   if (amount > 1) {
@@ -389,3 +389,23 @@ amountPlus.addEventListener("click", function() {
   amount++;
   amountValue.textContent = amount;
 });
+
+
+// scroll to top button
+const scrollBtn = document.getElementById("scroll-top")
+
+window.addEventListener("scroll", function() {
+  if(window.scrollY > 300) {
+    scrollBtn.classList.add("show")
+  } else {
+    scrollBtn.classList.remove("show")
+  }
+})
+
+scrollBtn.addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  }
+  )
+})
