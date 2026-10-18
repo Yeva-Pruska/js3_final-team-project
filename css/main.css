@@ -220,6 +220,8 @@ body {
   background-color: #1E1E22;
 }
 .catalog__product--image {
+  width: 301px;
+  height: 264px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -325,6 +327,7 @@ body {
 .product-modal__img {
   height: 100%;
   width: auto;
+  border-radius: 15px;
 }
 .product-modal__category {
   font-family: Inter;
