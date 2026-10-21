@@ -240,9 +240,9 @@
 </footer>
 
 <!-- Modal windows -------------------- -->
- <div id="cart-overlay" class="cart-overlay">
+ <!-- <div id="cart-overlay" class="cart-overlay">
   <div class="cart-modal">
-    <!-- Хедер кошика -->
+     Хедер кошика
     <div class="cart-header">
       <h2 class="cart-title">Кошик <span>[0]</span></h2>
       <button id="close-cart-btn" type="button" class="cart-close-btn" aria-label="Закрити кошик">
@@ -251,8 +251,9 @@
         </svg>
       </button>
     </div>
+    
 
-    <!-- Основний контент кошика-->
+     Основний контент кошика
     <div class="cart-body empty-cart">
       <div class="cart-empty-icon">
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -265,7 +266,77 @@
       <a href="#catalog" class="cart-catalog-btn">Дивитись каталог</a>
     </div>
   </div>
+</div> -->
+
+<!-- ------------------------------ -->
+
+<!-- Головний контейнер кошика з потрібним id та класом для JS -->
+<div class="cart-modal" id="cart-overlay">
+  <div class="cart-modal__content">
+    
+    <!-- Шапка кошика -->
+    <div class="cart-modal__header">
+      <h2 class="cart-modal__title">Кошик <span class="cart-modal__count">[0]</span></h2>
+      <!-- Додано id="close-cart-btn" -->
+      <button class="cart-modal__close" id="close-cart-btn" type="button" aria-label="Закрити">&times;</button>
+    </div>
+
+    <!-- Стан 1: Порожній кошик -->
+    <div class="cart-empty">
+      <div class="cart-empty__icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+      </div>
+      <p class="cart-empty__text">Кошик поки порожній</p>
+      <a href="#" class="cart-empty__button">Дивитись каталог</a>
+    </div>
+
+    <!-- Стан 2: Кошик з товарами (сюди JS рендерить товари) -->
+    <div class="cart-filled">
+      <div class="cart-items__list">
+        
+        <!-- Приклад товару (для верстки) -->
+        <div class="cart-item">
+          <div class="cart-item__img">
+            <img src="path-to-image.jpg" alt="Кросівки">
+          </div>
+          <div class="cart-item__info">
+            <h4 class="cart-item__title">Кросівки <span>Vortex Runner</span></h4>
+            <p class="cart-item__desc">Кросівки • розмір 40</p>
+            <div class="cart-item__actions">
+              <div class="cart-counter">
+                <button type="button" class="cart-counter__btn">-</button>
+                <span class="cart-counter__value">2</span>
+                <button type="button" class="cart-counter__btn">+</button>
+              </div>
+              <button type="button" class="cart-item__remove">Видалити</button>
+            </div>
+          </div>
+          <div class="cart-item__price">4 798 $</div>
+        </div>
+
+      </div>
+
+      <!-- Підсумок та кнопка оформлення -->
+      <div class="cart-summary">
+        <div class="cart-summary__row">
+          <span>Товарів</span>
+          <span class="cart-summary__count">5</span>
+        </div>
+        <div class="cart-summary__row cart-summary__row--total">
+          <span>Разом</span>
+          <span class="cart-summary__total-price">9 257$</span>
+        </div>
+        <button type="button" class="cart-summary__button">Оформити замовлення</button>
+      </div>
+    </div>
+
+  </div>
 </div>
+
 
 <!-- product modal -->
 <div class="product-modal" id="product-modal">
@@ -298,6 +369,50 @@
             <button class="product-modal__addtocart-btn" id="modal-cart">Додати в кошик</button>
         </div>
     </div>
+</div>
+
+
+<!-- Form modal -->
+<div class="modal">
+  <div class="modal__content">
+    <button class="modal__close" type="button" aria-label="Закрити">&times;</button>
+    
+    <h2 class="modal__title">Оформити замовлення</h2>
+    
+    <form class="form">
+      <label class="form__field">
+        <span class="form__label">Name <span class="form__required">*</span></span>
+        <input class="form__input" type="text" name="name" placeholder="name" required>
+      </label>
+
+      <label class="form__field">
+        <span class="form__label">Surname</span>
+        <input class="form__input" type="text" name="surname" placeholder="surname">
+      </label>
+
+      <label class="form__field">
+        <span class="form__label">E-mail <span class="form__required">*</span></span>
+        <input class="form__input" type="email" name="email" placeholder="e-mail" required>
+      </label>
+
+      <label class="form__field">
+        <span class="form__label">Phone <span class="form__required">*</span></span>
+        <input class="form__input" type="tel" name="phone" placeholder="phone number" required>
+      </label>
+
+      <label class="form__field">
+        <span class="form__label">Address <span class="form__required">*</span></span>
+        <input class="form__input" type="text" name="address" placeholder="address" required>
+      </label>
+
+      <label class="form__checkbox">
+        <input type="checkbox" name="agreement" required>
+        <span>Я погоджуюся з умовами використання <a href="#">файлів cookie</a></span>
+      </label>
+
+      <button class="form__button" type="submit">Оформити замовлення</button>
+    </form>
+  </div>
 </div>
 
 
