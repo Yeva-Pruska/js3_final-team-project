@@ -69,20 +69,62 @@ header > div:last-child {
     gap: 15px;
 }
 
+.search__holder {
+    position: relative;
+    width: 300px;
+}
+
+
 .search {
     background-color: $second-section-container;
     border: 1px solid $first-section-button-left;
-    border-radius: 6px;
-    padding: 8px 14px;
+    border-radius: 5px;
+    padding: 5px 14px;
     color: $second-main-text-color;
     font-size: 14px;
     outline: none;
-    width: 200px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .search::placeholder {
     color: $footer-second-color-text;
 }
+
+.search__dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    background: $second-section-container;
+    border: 1px solid $first-section-button-left;
+    z-index: 10;
+}
+
+.search__dropdown.show {
+    display: block;
+}
+
+.search__item {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: $footer-second-color-text;
+    text-align: left;
+    cursor: pointer;
+}
+
+.search__item:hover {
+    background: #515050;
+    color: rgb(242, 237, 237);
+}
+
+
 
 .cart-icon {
     width: 38px;

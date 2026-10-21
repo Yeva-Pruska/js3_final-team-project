@@ -403,9 +403,73 @@ window.addEventListener("scroll", function() {
 })
 
 scrollBtn.addEventListener("click", function() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  }
-  )
+  window.scrollTo(top)
 })
+
+
+
+// hero buttons
+const viewCatalogBtn = document.querySelector(".view-catalog-btn")
+const aboutBtn = document.querySelector(".about-store-btn")
+
+viewCatalogBtn.addEventListener("click", function() {
+  document.querySelector("#catalog").scrollIntoView()
+})
+
+aboutBtn.addEventListener("click", function() {
+  document.querySelector("#about").scrollIntoView()
+})
+
+
+
+// search system
+const searchInput = document.getElementById("search-input")
+const searchDropdown = document.getElementById("search-dropdown")
+
+function renderSearchResults(filteredProducts) {
+  searchDropdown.replaceChildren()
+
+  if(filteredProducts.length === 0) {
+    const message = document.createElement("p");
+    message.textContent = "Товарів не знайдено";
+    searchDropdown.append(message)
+  } else{
+    filteredProducts.forEach(function(product) {
+      const item = document.createElement("button");
+
+      item.type = "button";
+      item.classList.add("search__item");
+      item.textContent = `${product.name} · ${product.price} ₴`;
+
+      item.addEventListener("click", function() {
+        openProductModal(product)
+        searchDropdown.classList.remove("show")
+        searchInput.value = product.name;
+      });
+
+      searchDropdown.append(item);
+    });
+  }
+
+  searchDropdown.classList.add("show")
+}
+
+function searchProducts() {
+  const query = searchInput.value.trim().toLowerCase();
+
+  const filteredProducts = products.filter(function(product) {
+    return product.name.toLowerCase().includes(query);
+  });
+
+  renderSearchResults(filteredProducts);
+}
+
+searchInput.addEventListener("focus", searchProducts);
+
+searchInput.addEventListener("input", searchProducts);
+
+document.addEventListener("click", function(event) {
+  if(!event.target.closest(".search")) {
+    searchDropdown.classList.remove("show");
+  }
+});

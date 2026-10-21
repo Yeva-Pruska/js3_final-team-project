@@ -71,7 +71,11 @@
     </nav>
 
     <div class="header-actions">
-        <input type="text" placeholder="Пошук товарів..." class="search">
+        <div class="search__holder">
+            <input type="text" id="search-input" placeholder="Пошук товарів..." class="search" autocomplete="off">
+            <div class="search__dropdown" id="search-dropdown"></div>
+        </div>
+        
         <img src="img/cart-icon.webp" alt="" class="cart-icon" id="open-cart">
     </div>
 </header>
