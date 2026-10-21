@@ -8,6 +8,7 @@ export const products = [
     price: 2399,
     oldPrice: null,
     icon: "icon-sneaker",
+    image: "./img/sneakers/Vortex-Runner-sneakers.webp",
     art: "art-1",
     sizes: ["40", "41", "42", "43", "44"],
     inStock: true,
@@ -21,6 +22,7 @@ export const products = [
     price: 1899,
     oldPrice: 2299,
     icon: "icon-sneaker",
+    image: "./img/sneakers/Midnight-Court-sneakers.webp",
     art: "art-2",
     sizes: ["40", "41", "42", "43", "44"],
     inStock: true,
@@ -34,6 +36,7 @@ export const products = [
     price: 2199,
     oldPrice: null,
     icon: "icon-sneaker",
+    image: "./img/sneakers/Lime-Pulse-sneakers.webp",
     art: "art-3",
     sizes: ["40", "41", "42", "43", "44"],
     inStock: false,
@@ -47,6 +50,7 @@ export const products = [
     price: 2650,
     oldPrice: null,
     icon: "icon-sneaker",
+    image: "./img/sneakers/Puma-Pwrframe-Tr3-sneakers.webp",
     art: "art-4",
     sizes: ["40", "41", "42", "43", "44"],
     inStock: true,
@@ -62,6 +66,7 @@ export const products = [
     price: 1450,
     oldPrice: null,
     icon: "icon-hoodie",
+    image: "./img/hoodie/prada-hoodie-1.webp",
     art: "art-5",
     sizes: ["S", "M", "L", "XL"],
     inStock: true,
@@ -75,6 +80,7 @@ export const products = [
     price: 1590,
     oldPrice: 1590,
     icon: "icon-hoodie",
+    image: "./img/hoodie/prada-hoodie-2.webp",
     art: "art-6",
     sizes: ["S", "M", "L", "XL"],
     inStock: true,
@@ -88,6 +94,7 @@ export const products = [
     price: 1690,
     oldPrice: null,
     icon: "icon-hoodie",
+    image: "./img/hoodie/puma-hoodie.webp",
     art: "art-7",
     sizes: ["S", "M", "L", "XL"],
     inStock: false,
@@ -101,6 +108,7 @@ export const products = [
     price: 1380,
     oldPrice: null,
     icon: "icon-hoodie",
+    image: "./img/hoodie/prada-Technical-fabric-hoodie.webp",
     art: "art-8",
     sizes: ["S", "M", "L", "XL"],
     inStock: true,
@@ -116,6 +124,7 @@ export const products = [
     price: 599,
     oldPrice: null,
     icon: "icon-cap",
+    image: "./img/shablon.webp",
     art: "art-9",
     sizes: ["One Size"],
     inStock: true,
@@ -129,6 +138,7 @@ export const products = [
     price: 649,
     oldPrice: null,
     icon: "icon-cap",
+    image: "./img/shablon.webp",
     art: "art-10",
     sizes: ["One Size"],
     inStock: true,
@@ -142,6 +152,7 @@ export const products = [
     price: 620,
     oldPrice: null,
     icon: "icon-cap",
+    image: "./img/shablon.webp",
     art: "art-11",
     sizes: ["One Size"],
     inStock: false,
@@ -155,6 +166,7 @@ export const products = [
     price: 549,
     oldPrice: null,
     icon: "icon-cap",
+    image: "./img/shablon.webp",
     art: "art-12",
     sizes: ["One Size"],
     inStock: true,
@@ -171,6 +183,7 @@ export const products = [
     price: 490,
     oldPrice: null,
     icon: "icon-tshirt",
+    image: "./img/shablon.webp",
     art: "art-13",
     sizes: ["S", "M", "L", "XL"],
     inStock: true,
@@ -184,6 +197,7 @@ export const products = [
     price: 590,
     oldPrice: null,
     icon: "icon-tshirt",
+    image: "./img/shablon.webp",
     art: "art-14",
     sizes: ["S", "M", "L", "XL"],
     inStock: true,
@@ -197,6 +211,7 @@ export const products = [
     price: 540,
     oldPrice: null,
     icon: "icon-tshirt",
+    image: "./img/shablon.webp",
     art: "art-15",
     sizes: ["S", "M", "L", "XL"],
     inStock: false,
@@ -210,6 +225,7 @@ export const products = [
     price: 470,
     oldPrice: null,
     icon: "icon-tshirt",
+    image: "./img/shablon.webp",
     art: "art-16",
     sizes: ["S", "M", "L", "XL"],
     inStock: true,
@@ -222,7 +238,7 @@ const productsContainer = document.querySelector(".catalog__holder")
 function createProductCard(product) {
   return `
         <div class="catalog__product" data-product-id="${product.id}">
-            <img class="catalog__product--image" src="./img/shablon.webp" alt="">
+            <img class="catalog__product--image" src="${product.image}" alt="${product.icon}">
             <div class="catalog__info-holder">
                 <p class="catalog__product--category">${product.category}</p>
                 <h2 class="catalog__product--name">${product.name}</h2>
@@ -298,6 +314,7 @@ updateVisibleCatalog()
 // product modal
 const productModal = document.getElementById("product-modal");
 const closeModalBtn = document.getElementById("modal-close");
+const modalImage = document.querySelector(".product-modal__img")
 const modalCategory = document.getElementById("modal-category");
 const modalName = document.getElementById("modal-name");
 const modalPrice = document.getElementById("modal-price");
@@ -306,7 +323,10 @@ const modalInStock = document.getElementById("modal-available");
 const modalCartBtn = document.getElementById("modal-cart");
 
 function openProductModal(product) {
-  modalCategory.textContent = `URBN · ${product.category}`;
+  modalImage.src = product.image;
+  modalImage.alt = product.name
+
+  modalCategory.textContent = `${product.brand} · ${product.category}`;
   modalName.textContent = product.name;
   modalPrice.textContent = `${product.price} ₴`;
   modalText.textContent = product.description || "";
@@ -351,12 +371,12 @@ productModal.addEventListener("click", function(event) {
 });
 
 
-
+// - 1 + in modal
 const amountMinus = document.querySelector("#amount-minus");
 const amountPlus = document.querySelector("#amount-plus");
 const amountValue = document.querySelector("#amount-value");
 
-let amount = 1;
+var amount = 1;
 
 amountMinus.addEventListener("click", function() {
   if (amount > 1) {
@@ -369,3 +389,23 @@ amountPlus.addEventListener("click", function() {
   amount++;
   amountValue.textContent = amount;
 });
+
+
+// scroll to top button
+const scrollBtn = document.getElementById("scroll-top")
+
+window.addEventListener("scroll", function() {
+  if(window.scrollY > 300) {
+    scrollBtn.classList.add("show")
+  } else {
+    scrollBtn.classList.remove("show")
+  }
+})
+
+scrollBtn.addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  }
+  )
+})

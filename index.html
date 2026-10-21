@@ -64,10 +64,10 @@
     <nav class="nav">
         <img src="img/logo.webp" alt="logo" class="logo">
 
-        <a href="#">Головна</a>
-        <a href="#">Каталог</a>
-        <a href="#">Про нас</a>
-        <a href="#">Контакти</a>
+        <a href="#hero">Головна</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#about">Про нас</a>
+        <a href="#contacts">Контакти</a>
     </nav>
 
     <div class="header-actions">
@@ -77,7 +77,7 @@
 </header>
 
     <!-- First section -->
-    <section class="hero">
+    <section class="hero" id="hero">
         <span class="subtitle">street style shop</span>
         <h1>ВБРАННЯ<br>ДЛЯ ВУЛИЦЬ<br>ТВОГО МІСТА</h1>
         <p>Кросівки, худі, кепки й аксесуари, які носять твоя <br>стрічка. Обирай образ і додавай у кошик за пару кліків.</p>
@@ -88,7 +88,7 @@
     </section>
 
     <!-- Catalog -->
-    <section class="catalog">
+    <section class="catalog" id="catalog">
             <div class="catalog__container">
                 <div class="catalog__head">
                     <h2 class="catalog__title">Каталог</h2>
@@ -135,7 +135,7 @@
         </section>
 
         <!-- About the Store -->
-        <section class="about-store">
+        <section class="about-store" id="about">
             <div class="img-container">
                 <img src="img/shopping-bag.webp" alt="Обирай свій стиль">
                 <div class="badge">обирай свій стиль</div>
@@ -166,7 +166,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section class="contacts">
+        <section class="contacts" id="contacts">
             <div class="contacts-inf-part">
                 <div class="contacts-title">
                     <h2>Контакти</h2>
@@ -210,10 +210,10 @@
         <div class="footer-column">
             <h3 class="footer-title">Навігація</h3>
             <ul class="footer-list">
-                 <li><a href="#">Головна</a></li>
-                 <li><a href="#">Каталог</a></li>
-                 <li><a href="#">Про нас</a></li>
-                 <li><a href="#">Контакти</a></li>
+                 <li><a href="#hero">Головна</a></li>
+                 <li><a href="#catalog">Каталог</a></li>
+                 <li><a href="#about">Про нас</a></li>
+                 <li><a href="#contacts">Контакти</a></li>
                 </ul>
         </div>
         
@@ -342,7 +342,7 @@
 <div class="product-modal" id="product-modal">
     <div class="product-modal__content">
         <button class="product-modal__close" id="modal-close">&times;</button>
-        <img class="product-modal__img" src="./img/shablon2.webp" alt="product">
+        <img class="product-modal__img" src="" alt="">
         <div class="product-modal__info">
             <h3 class="product-modal__category" id="modal-category"></h3>
             <h2 class="product-modal__name" id="modal-name"></h2>
@@ -370,6 +370,8 @@
         </div>
     </div>
 </div>
+
+<button class="scroll-top" id="scroll-top">↑</button>
 
 
 <!-- Form modal -->
