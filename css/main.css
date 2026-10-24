@@ -548,13 +548,17 @@ body {
   gap: 25px;
   margin-bottom: 130px;
 }
-.contacts .contacts-sm :hover {
+.contacts .contacts-sm .bi {
+  transition: 0.3s ease;
+}
+.contacts .contacts-sm .bi:hover {
   color: #FF3D1A;
 }
 .contacts img {
   display: flex;
   margin-top: 152px;
   margin-bottom: 176px;
+  margin-left: 125px;
 }
 
 * {
