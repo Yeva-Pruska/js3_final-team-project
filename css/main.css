@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   scroll-behavior: smooth;
 }
@@ -196,12 +197,59 @@ body {
   letter-spacing: 0%;
 }
 .catalog__available-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   color: #A3A3AB;
   font-family: Inter;
   font-weight: 500;
   font-size: 18px;
   line-height: 100%;
   letter-spacing: 0%;
+}
+.catalog__switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+.catalog__available-btn-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.catalog__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1A1A1E;
+  transition: 0.3s;
+  border: 1px solid #2C2C31;
+  border-radius: 28px;
+}
+.catalog__slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 2px;
+  background-color: #A3A3AB;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+.catalog__switch:hover .catalog__slider:before {
+  background-color: #a0a3b1;
+}
+.catalog__available-btn-checkbox:checked + .catalog__slider {
+  background-color: #FF330E;
+}
+.catalog__available-btn-checkbox:checked + .catalog__slider:before {
+  transform: translateX(21px);
+  background-color: #ffffff; /* Білий колір кружечка увімкненого стану */
 }
 .catalog__reset {
   color: #B3B3B3;

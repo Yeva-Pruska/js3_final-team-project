@@ -95,11 +95,13 @@
             font-size: 18px;
             line-height: 100%;
             letter-spacing: 0%;
-
         }
     }
 
     &__available-btn {
+        display: flex;
+        align-items: center;
+        gap: 20px;
         color: $light-grey;
         font-family: Inter;
         font-weight: 500;
@@ -107,6 +109,61 @@
         line-height: 100%;
         letter-spacing: 0%;
     }
+
+    &__switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 28px;
+    }
+
+    &__available-btn-checkbox {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    &__slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0; 
+        left: 0; 
+        right: 0; 
+        bottom: 0;
+        background-color: $third-section-and-footer-background-color;
+        transition: 0.3s;
+        border: 1px solid #2C2C31;
+        border-radius: 28px;
+    }
+
+
+    &__slider:before {
+        position: absolute;
+        content: "";
+        height: 22px;
+        width: 22px;
+        left: 3px;
+        bottom: 2px;
+        background-color: $light-grey;
+        transition: 0.3s;
+        border-radius: 50%;
+    }
+
+    &__switch:hover &__slider:before {
+        background-color: #a0a3b1;
+    }
+
+    &__available-btn-checkbox:checked + &__slider {
+        background-color: $header-background-color;
+    }
+
+    &__available-btn-checkbox:checked + &__slider:before {
+        transform: translateX(21px);
+        background-color: #ffffff; /* Білий колір кружечка увімкненого стану */
+    }
+
+
+
 
     &__reset {
         color: $main-text-color;
