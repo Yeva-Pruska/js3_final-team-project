@@ -80,11 +80,12 @@
     <section class="hero" id="hero">
         <span class="subtitle">street style shop</span>
         <h1>ВБРАННЯ<br>ДЛЯ ВУЛИЦЬ<br>ТВОГО МІСТА</h1>
-        <p>Кросівки, худі, кепки й аксесуари, які носять твоя <br>стрічка. Обирай образ і додавай у кошик за пару кліків.</p>
+        <p> Брендові кросівки, худі, кепки й аксесуари, які носять твоя <br>стрічка. Обирай образ і додавай у кошик за пару кліків.</p>
         <div class="buttons">
             <button class="view-catalog-btn">Дивитись каталог</button>
             <button class="about-store-btn">Про магазин</button>
         </div>
+        <img src="img/hero.webp" alt="">
     </section>
 
     <!-- Catalog -->
@@ -240,101 +241,26 @@
 </footer>
 
 <!-- Modal windows -------------------- -->
- <!-- <div id="cart-overlay" class="cart-overlay">
-  <div class="cart-modal">
-     Хедер кошика
-    <div class="cart-header">
-      <h2 class="cart-title">Кошик <span>[0]</span></h2>
-      <button id="close-cart-btn" type="button" class="cart-close-btn" aria-label="Закрити кошик">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
+
+
+
+<!-- cart modal -->
+<div class="cart-modal-section">
+    <div id="cart-header">
+    <h2>Кошик <span id="cart-modal-count">[0]</span></h2>
+    <img src="img/icons/marketeq_cross-circle.png" id="close-cart" alt="">
     </div>
-    
-
-     Основний контент кошика
-    <div class="cart-body empty-cart">
-      <div class="cart-empty-icon">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3 3H5L6.68 14.39C6.77144 15.0031 7.0792 15.5583 7.5479 15.9554C8.0166 16.3524 8.61461 16.5658 9.23 16.56H18.4C19.0154 16.5658 19.6134 16.3524 20.0821 15.9554C20.5508 15.5583 20.8586 15.0031 20.92 14.39L22 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="9" cy="20" r="1" stroke="currentColor" stroke-width="2"/>
-          <circle cx="18" cy="20" r="1" stroke="currentColor" stroke-width="2"/>
-        </svg>
-      </div>
-      <p class="cart-empty-text">Кошик поки порожній</p>
-      <a href="#catalog" class="cart-catalog-btn">Дивитись каталог</a>
+    <div id="cart-empty">
+        <img src="img/icons/cart-icon.webp" alt="">
+        <p>Кошик поки порожній</p>
+        <button class="view-catalog-btn">Дивитись каталог</button> <!-- TODO: Лічильник -->
     </div>
-  </div>
-</div> -->
-
-<!-- ------------------------------ -->
-
-<!-- Головний контейнер кошика з потрібним id та класом для JS -->
-<div class="cart-modal" id="cart-overlay">
-  <div class="cart-modal__content">
-    
-    <!-- Шапка кошика -->
-    <div class="cart-modal__header">
-      <h2 class="cart-modal__title">Кошик <span class="cart-modal__count">[0]</span></h2>
-      <!-- Додано id="close-cart-btn" -->
-      <button class="cart-modal__close" id="close-cart-btn" type="button" aria-label="Закрити">&times;</button>
-    </div>
-
-    <!-- Стан 1: Порожній кошик -->
-    <div class="cart-empty">
-      <div class="cart-empty__icon">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <circle cx="9" cy="21" r="1"></circle>
-          <circle cx="20" cy="21" r="1"></circle>
-          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-        </svg>
-      </div>
-      <p class="cart-empty__text">Кошик поки порожній</p>
-      <a href="#" class="cart-empty__button">Дивитись каталог</a>
-    </div>
-
-    <!-- Стан 2: Кошик з товарами (сюди JS рендерить товари) -->
-    <div class="cart-filled">
-      <div class="cart-items__list">
+    <div id="cart-footer">
+        <p>Товарів <span>0</span></p>
+        <p>Разом <span>0</span></p> 
+        <!-- TODO: Лічильник -->
         
-        <!-- Приклад товару (для верстки) -->
-        <div class="cart-item">
-          <div class="cart-item__img">
-            <img src="path-to-image.jpg" alt="Кросівки">
-          </div>
-          <div class="cart-item__info">
-            <h4 class="cart-item__title">Кросівки <span>Vortex Runner</span></h4>
-            <p class="cart-item__desc">Кросівки • розмір 40</p>
-            <div class="cart-item__actions">
-              <div class="cart-counter">
-                <button type="button" class="cart-counter__btn">-</button>
-                <span class="cart-counter__value">2</span>
-                <button type="button" class="cart-counter__btn">+</button>
-              </div>
-              <button type="button" class="cart-item__remove">Видалити</button>
-            </div>
-          </div>
-          <div class="cart-item__price">4 798 $</div>
-        </div>
-
-      </div>
-
-      <!-- Підсумок та кнопка оформлення -->
-      <div class="cart-summary">
-        <div class="cart-summary__row">
-          <span>Товарів</span>
-          <span class="cart-summary__count">5</span>
-        </div>
-        <div class="cart-summary__row cart-summary__row--total">
-          <span>Разом</span>
-          <span class="cart-summary__total-price">9 257$</span>
-        </div>
-        <button type="button" class="cart-summary__button">Оформити замовлення</button>
-      </div>
     </div>
-
-  </div>
 </div>
 
 
@@ -351,10 +277,10 @@
 
             <label class="product-modal__title">Розмір</label>
             <div class="product-modal__sizes">
-                <div class="product-modal__size">S</div>
-                <div class="product-modal__size">M</div>
-                <div class="product-modal__size">L</div>
-                <div class="product-modal__size">XL</div>
+                <div class="product-modal__size" id="sizeS"><button>S</button></div>
+                <button class="product-modal__size" id="sizeM">M</button>
+                <button class="product-modal__size" id="sizeL">L</button>
+                <button class="product-modal__size" id="sizeXL">XL</button>
             </div>
 
             <label class="product-modal__title">Кількість</label>

@@ -95,3 +95,59 @@ header > div:last-child {
 }
 
 
+
+.custom-select {
+  position: relative;
+  width: 250px; // або ваша ширина
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 18px;
+
+  &__header {
+    background-color: $third-section-and-footer-background-color;
+    color: $second-main-text-color;
+    border: 1px solid #2C2C31;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: #FF5722; /* Помаранчева рамка при наведенні */
+    }
+  }
+
+  &__body {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    right: 0;
+    background-color: $third-section-and-footer-background-color;
+    border: 1px solid #2C2C31;
+    border-radius: 8px;
+    overflow: hidden;
+    display: none; /* Споховано за замовчуванням */
+    z-index: 10;
+  }
+
+  &__option {
+    padding: 12px 15px;
+    color: $second-main-text-color;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+
+    /* Помаранчевий ховер без будь-якого синього кольору */
+    &:hover {
+      background-color: #FF5722 !important;
+      color: #ffffff !important;
+    }
+  }
+
+  /* Клас, коли меню відкрите */
+  &.open &__body {
+    display: block;
+  }
+}
